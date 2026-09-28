@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module engine (
+module tt_um_engine (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -24,4 +24,4 @@ module engine (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
-endmodule : engine
+endmodule : tt_um_engine
