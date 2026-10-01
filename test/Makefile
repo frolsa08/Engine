@@ -37,7 +37,15 @@ VERILOG_SOURCES += $(PWD)/tb.v
 TOPLEVEL = tb
 
 # List test modules to run, separated by commas and without the .py suffix:
-COCOTB_TEST_MODULES = test
+COCOTB_TEST_MODULES = tb.tests
 
-# include cocotb's make rules to take care of the simulator setup
+ifeq ($(strip $(MAKECMDGOALS)),clean)
+# Cleaning does not need Cocotb, so it can run without an activated venv.
+else
 include $(shell cocotb-config --makefiles)/Makefile.sim
+endif
+
+.PHONY: clean
+clean::
+	$(RM) -rf sim_build
+	$(RM) -f results.xml tb.fst tb.vcd
