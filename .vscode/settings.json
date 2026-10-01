@@ -1,5 +1,7 @@
 {
   "python.defaultInterpreterPath": "${workspaceFolder}/test/.venv/bin/python",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "verilog.linting.linter": "verilator",
   "verilog.formatting.verilogHDL.formatter": "verible-verilog-format"
 }
