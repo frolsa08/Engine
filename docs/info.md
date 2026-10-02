@@ -43,6 +43,8 @@ Most instructions contain one opcode byte. Instructions with an immediate or add
 | `0x11` | `MOV PINS, A` | 1 | Write A to the output latch. |
 | `0x12` | `SET PINS, imm8` | 2 | Write the following byte to the output latch. |
 | `0x13` | `SET DIR, imm8` | 2 | Set output enables from the following byte. |
+| `0x14` | `PULL A` |	1	| Read one byte from the engine's input FIFO into A and remove it from the FIFO. If empty, stall until a byte is available. |
+| `0x15` | `PUSH A`	| 1	| Write A to the engine's output FIFO. If full, stall until space is available. |
 | `0x20` | `SET A, imm8` | 2 | Load A. |
 | `0x22` | `XOR A, imm8` | 2 | XOR A with the immediate. |
 | `0x23` | `SHL A` | 1 | Shift left; fill bit0 with zero and discard bit7. |
