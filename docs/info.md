@@ -4,7 +4,7 @@
 
 WISA means **Waveform Instruction Set Architecture**. It is a small programmable I/O instruction set: a program describes pin values, timing, and input-dependent actions instead of selecting a fixed UART, SPI, or I²C peripheral.
 
-This draft uses 8-bit opcode bytes and optional operand bytes. It is a design target, not an implemented feature of the current RTL. The host programming interface remains open. The alternative fixed-word ISA is described in [ISA16.md](ISA16.md).
+This draft uses 8-bit opcode bytes and optional operand bytes. It is a design target, not an implemented feature of the current RTL. The host programming interface remains open. The alternative fixed-word ISA is described in TBD.
 
 ### State
 
